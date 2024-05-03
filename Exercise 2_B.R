@@ -99,6 +99,7 @@ caro_long <- caro2 |>
 head(caro_long)
 
 #why now tibble is much smaller?
+
 ggplot(caro_long, aes(name, value)) +
   # we remove outliers to increase legibility, analogue
   # Laube and Purves (2011)

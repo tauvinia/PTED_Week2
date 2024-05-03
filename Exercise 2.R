@@ -24,11 +24,11 @@ wildschwein_BE <- group_by(wildschwein_BE, TierID)
 wildschwein_BE <- mutate(wildschwein_BE, 
        timelag = difftime_secs(lead(DatetimeUTC), DatetimeUTC))
 
-# why we first use later as lead and then as lag?
+# why we first use later as lead and then as lag? -> should be lead
 
 # Distance
 
-later <- lag(wildschwein_BE$geometry)
+later <-  lead(wildschwein_BE$geometry)
 now <- wildschwein_BE$geometry
 
 st_distance(later, now, by_element = TRUE)  # by_element must be set to TRUE
