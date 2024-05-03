@@ -2,3 +2,14 @@
 .Rhistory
 .RData
 .Ruserdata
+
+
+*.tif
+data/
+
+combined_data.csv
+#? protect the movement data
+ #push/pull
+
+#error
+#pdf file
