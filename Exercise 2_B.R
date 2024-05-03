@@ -98,7 +98,7 @@ caro_long <- caro2 |>
 
 head(caro_long)
 
-#why now tibble is much smaller?
+#why now tibble is much smaller? -> only head and 4 columns
 
 ggplot(caro_long, aes(name, value)) +
   # we remove outliers to increase legibility, analogue
