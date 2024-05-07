@@ -77,3 +77,8 @@ wildschwein |>
 summarise(wildschwein, mean = mean(timelag, na.rm = TRUE))
 
 
+
+install.packages("gitcreds")
+library("gitcreds")
+gitcreds_set()
+gitcreds_get()

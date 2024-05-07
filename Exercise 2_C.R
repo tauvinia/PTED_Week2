@@ -43,8 +43,6 @@ data_smry
 mcp <- st_convex_hull(data_smry)
 plot(mcp)
 
-ggplot(mcp) +
-  geom_sf(alpha = 0.4) 
 
 ggplot(mcp) +
   geom_sf(alpha = 0.4) +
@@ -56,21 +54,6 @@ library("tmap")
 #tm_shape (add data) +
 # what want to do with it
 
-
-library("terra")
-
-pk100_BE <- terra::rast("pk100_BE.tif")
-
-pk100_BE
-
-plot(pk100_BE)
-
-plotRGB(pk100_BE)
-tm_shape(pk100_BE) +
-  tm_rgb() +
-  tm_shape (mcp) +
-  tm_polygons(alpha = 0.4, border.col = "red")+
-  tm_legend(bg.col = "white")
 
 #Task 6
 tmap_mode("view")
